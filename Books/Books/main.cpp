@@ -7,9 +7,16 @@
 //
 
 #include <iostream>
+#include "Book.hpp"
+#include "BookDatabase.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
-}
+    const string FILE = "bookFile.txt";
+    BookDatabase bookDatabase;
+    
+    bookDatabase.getBooksFromFile(FILE, bookDatabase);
+    
+    cout << bookDatabase.searchByAuthor("Brown").size() << endl;
+    
+    cout << bookDatabase;
+    return 0;}
