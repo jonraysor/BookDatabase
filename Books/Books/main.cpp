@@ -16,7 +16,10 @@ int main(int argc, const char * argv[]) {
     
     bookDatabase.getBooksFromFile(FILE, bookDatabase);
     
-    cout << bookDatabase.searchByAuthor("Brown").size() << endl;
+    cout << "There are " << bookDatabase.searchByAuthor("Brown").size() << " book(s) from " << "Brown in the database" << endl << endl;
+    cout << "We found this book related to the title Chemistry in the database " << endl << bookDatabase.searchByTitle("Chemistry") << endl << endl;
+    cout << "There are " << bookDatabase.searchByPublisher("Prentice_Hall").size() << " book(s) published by Prentice_Hall in the database." << endl << endl;
+    cout << "There are " << bookDatabase.publishedBefore(2011).size() << " book(s) published before 2011 in the database" << endl << endl;
     
     cout << bookDatabase;
     return 0;}

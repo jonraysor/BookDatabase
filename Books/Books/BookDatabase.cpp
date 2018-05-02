@@ -116,6 +116,7 @@ ostream& operator << (ostream& os, const BookDatabase& bookDatabase){
         os << numBook;
         os << ": ";
         os << it -> second;
+        os << endl;
         numBook++;
     }
     return os;
